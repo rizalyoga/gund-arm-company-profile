@@ -1,0 +1,10 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.containers {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 12px;
+}
