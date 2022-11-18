@@ -2,7 +2,9 @@ import React, { FC } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { linkTabHoverStyle } from "./Styles";
 
-const Homepage: FC = () => {
+const LandingPage: FC = () => {
+  const isInternetOnline = window.navigator.onLine;
+
   return (
     <div className="containers py-10 flex justify-center items-center flex-col">
       <h1 className="text-white font-bold text-7xl">~Hello👋~</h1>
@@ -25,16 +27,17 @@ const Homepage: FC = () => {
         </nav>
         <Outlet />
       </div>
+
       <iframe
         className="xl:min-h-[600px] lg:min-h-[480px] md:min-h-[380px] min-h-[300px] w-[100%]"
-        src="https://www.youtube.com/embed/AdcktATbd-I"
+        src="https://www.youtube.com/embed/7-5IRey5wtI"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        title="Embedded youtube"
+        title="Gundam Video"
       />
     </div>
   );
 };
 
-export default Homepage;
+export default LandingPage;

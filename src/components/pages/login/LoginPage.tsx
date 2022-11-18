@@ -1,0 +1,17 @@
+import Waves from "../../animation/waves/Waves";
+import LoginForm from "../../common/form/login-form/LoginForm";
+
+const PageThree = () => {
+  return (
+    <>
+      <div className="containers flex justify-center items-center flex-col overflow-hidden">
+        <h1 className="text-white font-bold text-7xl pt-[30px]">Hello 👋</h1>
+        <h2 className="pt-4 text-white text-2xl">Please login first</h2>
+        <LoginForm />
+      </div>
+      <Waves />
+    </>
+  );
+};
+
+export default PageThree;
