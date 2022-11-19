@@ -23,9 +23,9 @@ const Navbar: FC = () => {
           <img
             src={IconImage}
             alt="icon image"
-            className="w-[60px] max-sm:hidden m-[-10px] "
+            className="w-[60px]  ml-[-10px] max-sm:w-[70px] max-sm:ml-[-20px] "
           />
-          <h4 className="font-bold text-slate-800 text-2xl font-poppins tracking-tighter">
+          <h4 className="max-sm:hidden font-bold text-slate-800 text-2xl font-poppins tracking-tighter">
             COMPANYS
           </h4>
         </div>

@@ -8,7 +8,7 @@ import PageThree from "./components/pages/login/LoginPage";
 import Content1 from "./components/home-contents/content-1/Content1";
 import Content2 from "./components/home-contents/content-2/Content2";
 import Content3 from "./components/home-contents/content-3/Content3";
-import DetailUser from "./components/pages/detail-user/DetailUser";
+import DetailMember from "./components/pages/detail-member/DetailMember";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
           </Route>
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<PageThree />} />
-          <Route path="/about/member/:id" element={<DetailUser />} />
+          <Route path="/about/member/:id" element={<DetailMember />} />
         </Routes>
       </div>
       <Footer />
