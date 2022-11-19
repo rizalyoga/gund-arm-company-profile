@@ -1,16 +1,23 @@
-import React from "react";
+import {
+  divContentElementStyles,
+  paragraphContentStyles,
+  titleContentElementStyles,
+} from "../styles";
 
 const Content3 = () => {
   return (
-    <div className="p-10 flex justify-center items-center flex-col bg-red-300 rounded-b-sm">
-      <h2 className="text-white text-4xl">This is THRID CONTENT</h2>
-      <p className="pt-4 text-slate-600">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-        voluptatibus provident qui saepe quos eum tenetur ipsum possimus
-        molestias incidunt. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Vel quasi corporis id, consequatur atque nesciunt impedit
-        voluptates, tenetur culpa amet, adipisci voluptatem? Ratione nobis quod
-        praesentium error accusantium consequuntur reiciendis!
+    <div className={divContentElementStyles}>
+      <h2 className={titleContentElementStyles}>
+        Targeting prospective employees
+      </h2>
+      <p className={paragraphContentStyles}>
+        Customer-Oriented Marketing provides digital marketing solutions for
+        businesses worldwide, including digital advertising campaigns, search
+        engine optimization best practices and social media posting to improve
+        its clients' positioning across the internet. Our fully remote team also
+        offers digital marketing services to the higher education industry,
+        including universities, community colleges and other professional
+        educational institutions.
       </p>
     </div>
   );

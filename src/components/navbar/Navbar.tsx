@@ -17,7 +17,7 @@ const Navbar: FC = () => {
     }
   };
   return (
-    <nav className="bg-white h-12  ">
+    <nav className="bg-white h-12 z-10 absolute top-0 w-[100%] ">
       <div className="max-w-[1200px] m-auto h-[100%] flex justify-between items-center px-3 font-medium ">
         <div className="logo flex flex-row justify-around items-center">
           <img

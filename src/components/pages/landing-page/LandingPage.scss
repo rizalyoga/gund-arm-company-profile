@@ -1,0 +1,16 @@
+.hero {
+  position: relative;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-image: linear-gradient(
+      to top right,
+      rgba(121, 91, 243, 0),
+      #ebe6ff
+    ),
+    url(https://www.apollographql.com/tutorials/static/apollo_rocket.49b013af.svg);
+}
+
+span .hi-icon {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}

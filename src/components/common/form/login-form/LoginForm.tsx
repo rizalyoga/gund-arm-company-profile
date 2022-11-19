@@ -18,7 +18,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
 
     const dataUser: LoginDataType = {
@@ -26,15 +26,17 @@ const LoginForm = () => {
       password,
     };
 
-    if (dataUser.email && password) {
+    if (dataUser.email && dataUser.password) {
       alert(`EMAIL : ${dataUser.email} \nPASSWORD : ${dataUser.password} `);
-    } else {
-      alert("please check your Input ");
     }
   };
 
   return (
-    <div className="z-20 mt-4 mx-2 bg-slate-100 w-[400px] max-sm:w-[100%] min-h-[400px] rounded-md">
+    <div
+      className="z-20 mt-4 mx-2 w-[400px] max-sm:w-[100%] min-h-[400px] rounded-md 
+      bg-white shadow-lg bg-clip-padding bg-opacity-60 border border-gray-200"
+      style={{ backdropFilter: "blur(20px)" }}
+    >
       <img
         src={ImageIcon}
         alt="icon-company"
@@ -42,7 +44,7 @@ const LoginForm = () => {
         width={100}
         height={100}
       />
-      <h4 className="font-bold font-poppins text-[1.5rem] mt-[-25px]">
+      <h4 className="text-gray-800 font-bold font-poppins text-[1.5rem] mt-[-25px]">
         COMPANYS
       </h4>
       <form className="px-4" onSubmit={onSubmit}>
@@ -55,6 +57,7 @@ const LoginForm = () => {
             className={inputElementStyles}
             placeholder="example@gmail.com"
             title="email"
+            name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -68,6 +71,7 @@ const LoginForm = () => {
             className={inputElementStyles}
             placeholder="password"
             title="password"
+            name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />

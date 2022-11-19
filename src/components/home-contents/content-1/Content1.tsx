@@ -1,14 +1,20 @@
-import React from "react";
+import {
+  divContentElementStyles,
+  paragraphContentStyles,
+  titleContentElementStyles,
+} from "../styles";
 
 const Content1 = () => {
   return (
-    <div className="p-10 flex justify-center items-center flex-col bg-red-300 rounded-b-sm">
-      <h2 className="text-white text-4xl">This is FIRST CONTENT</h2>
-      <p className="pt-4 text-slate-600">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-        voluptatibus provident qui saepe quos eum tenetur ipsum possimus
-        molestias incidunt molestiae labore iusto veritatis facilis aut eos,
-        ullam dolorem illum.
+    <div className={divContentElementStyles}>
+      <h2 className={titleContentElementStyles}>Targeting investors</h2>
+      <p className={paragraphContentStyles}>
+        The expert staff of Liaison Professionals, Inc. possesses a broad range
+        of experience. From aiding presidents, as well as federal, state and
+        local officials, to overseeing parliamentary procedures and treaties and
+        assisting clients in the private sector, our team provides clients with
+        a wealth of experience, personal perspective and the ability to assemble
+        effective public-private partnerships.
       </p>
     </div>
   );

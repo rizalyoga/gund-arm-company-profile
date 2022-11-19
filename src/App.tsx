@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Homepage from "./components/pages/landing-page/LandingPage";
@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div className="bg-slate-700 min-h-screen">
+      <div className=" min-h-screen">
         <Routes>
           <Route path="/" element={<Homepage />}>
             <Route index element={<Content1 />} />
