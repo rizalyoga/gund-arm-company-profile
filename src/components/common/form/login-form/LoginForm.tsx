@@ -26,8 +26,12 @@ const LoginForm = () => {
       password,
     };
 
-    if (dataUser.email && dataUser.password) {
+    if (dataUser.email && dataUser.password.length > 5) {
       alert(`EMAIL : ${dataUser.email} \nPASSWORD : ${dataUser.password} `);
+    } else if (dataUser.email && dataUser.password.length <= 5) {
+      alert("Password length minimum 6 character !");
+    } else {
+      alert("Please input field !");
     }
   };
 
@@ -44,7 +48,7 @@ const LoginForm = () => {
         width={100}
         height={100}
       />
-      <h4 className="text-gray-800 font-bold font-poppins text-[1.5rem] mt-[-25px]">
+      <h4 className="text-gray-800 font-bold font-poppins text-[1.5rem] mt-[-25px] tracking-tighter">
         COMPANYS
       </h4>
       <form className="px-4" onSubmit={onSubmit}>
@@ -76,6 +80,12 @@ const LoginForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+        <a
+          href="#"
+          className="float-left text-sm py-2 hover:text-blue-500 hover:underline"
+        >
+          Forget Password ?
+        </a>
         <input className={buttonElementStyles} type="submit" value="Login" />
       </form>
     </div>

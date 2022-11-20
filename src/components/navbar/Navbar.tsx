@@ -17,7 +17,7 @@ const Navbar: FC = () => {
     }
   };
   return (
-    <nav className="bg-white h-12 z-10 absolute top-0 w-[100%] ">
+    <nav className="bg-white h-12 z-10 absolute top-0 w-[100%] shadow-md ">
       <div className="max-w-[1200px] m-auto h-[100%] flex justify-between items-center px-3 font-medium ">
         <div className="logo flex flex-row justify-around items-center">
           <img
@@ -30,7 +30,7 @@ const Navbar: FC = () => {
           </h4>
         </div>
         <div className="links">
-          <ul className="flex gap-4">
+          <ul className="flex gap-4 max-sm:gap-3">
             <li className={linkHoverStyle} onClick={(e) => handleClick(e)}>
               <NavLink className="nav-link" to="/">
                 Home

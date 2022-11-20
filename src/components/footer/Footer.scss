@@ -1,10 +1,12 @@
 .footer-container {
   -webkit-background-size: cover;
+  // background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(
       to top right,
       rgba(156, 134, 246, 0),
-      #d8eafd
+      #d8eafde1
     ),
     url(https://www.moonhighway.com/static/images/footer-bg.png);
+  // url(../../assets/background-image/barbatos-background.png);
 }

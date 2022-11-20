@@ -16,13 +16,13 @@ const PageTwo = () => {
   };
 
   return (
-    <div className="bg-gray-700 min-h-screen">
-      <div className="containers py-10 mt-8  px-3 flex justify-center items-center flex-col">
-        <h1 className="text-white font-lobster font-bold text-7xl ">
+    <div className="parent-wrapper bg-gray-700 min-h-screen mt-10 w-full">
+      <div className="containers bg-gray-600 py-10 px-3 flex justify-center items-center flex-col">
+        <h1 className="font-lobster font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-400 to-red-300 ">
           About us
         </h1>
         <h3 className="py-4 text-white font-poppins text-2xl">
-          This is About Page{" "}
+          This is About Page
         </h3>
         <p className=" text-white text-lef p-4 ">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
@@ -45,7 +45,7 @@ const PageTwo = () => {
             dataUsers.map((data) => (
               <div key={data.id}>
                 <p
-                  className="text-slate-100 text-left cursor-pointer"
+                  className="text-slate-100 text-left cursor-pointer hover:text-sky-300"
                   onClick={() => toDetailMember(data.id)}
                 >
                   {`${data.id}. ${data.name} - ${data.company.name}`}

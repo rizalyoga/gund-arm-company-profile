@@ -1,4 +1,13 @@
 .active {
-  color: #374151;
-  border-bottom: solid 2.5px #0e1333;
+  color: #c1b0ff;
+  font-weight: 600;
+  padding: 0 2px 0 2px;
+  border-bottom: solid 2.5px #c1b0ff;
+  border-radius: 3px;
+}
+
+@media (max-width: 430px) {
+  .active {
+    padding: 0;
+  }
 }

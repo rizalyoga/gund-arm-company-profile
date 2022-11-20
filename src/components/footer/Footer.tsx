@@ -9,7 +9,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="footer-container min-h-[300px] text-gray-700 relative bottom-0 z-50 w-[100%] grid place-content-center">
+    <div className="footer-container min-h-[200px] text-gray-700 relative bottom-0 z-50 w-[100%] grid place-content-center">
       <h1 className="font-semibold text-[2rem] font-lobster tracking-tighter">
         🚀 Space Companys 🚀
       </h1>
