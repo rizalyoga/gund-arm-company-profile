@@ -26,7 +26,7 @@ const ListImageProducts = () => {
   };
 
   return (
-    <section className="machines-wrapper py-6 rounded-sm bg-gradient-to-br from-gray-100 via-gray-300 to-white ">
+    <section className="machines-wrapper duration-300 py-6 rounded-sm bg-gradient-to-br from-gray-100 via-gray-300 to-white ">
       <div className="eva-banner-container overflow-hidden max-h-[500px] mb-6  px-5 ">
         <LazyLoadImage
           src="https://www.projectgunpla.com/evangelion/hero.png"
@@ -48,15 +48,13 @@ const ListImageProducts = () => {
             />
           ))}
       </div>
-      {listProductData.length !== dataProducts.length ? (
+      {listProductData.length !== dataProducts.length && (
         <button
-          className="mt-8 py-3 px-6 delay-75 text-white bg-red-300 hover:underline active:bg-red-400 rounded-full"
+          className="mt-8 py-3 px-6 ease-in duration-200 rounded-full text-white bg-red-300 hover:underline active:bg-red-400  hover:ring-2 hover:ring-red-400 "
           onClick={loadMore}
         >
           More Product
         </button>
-      ) : (
-        <></>
       )}
     </section>
   );

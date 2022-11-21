@@ -24,7 +24,7 @@ const Navbar: FC = () => {
             className="w-[60px]  ml-[-10px] max-sm:w-[70px] max-sm:ml-[-20px] "
           />
           <h4 className="max-sm:hidden font-bold text-slate-800 text-2xl font-poppins tracking-tighter">
-            COMPANYS
+            GUND.ARM
           </h4>
         </div>
         <div className="links">
