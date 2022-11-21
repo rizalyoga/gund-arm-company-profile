@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import listProductData from "../../../data/product-data/productData.json";
-import Logo from "../../../assets/icons/gundam-icon.png";
+import LoaderImage from "../../../assets/icons/loader-image.webp";
 
 export interface DataProductsProps {
   id: number;
@@ -30,7 +30,7 @@ const ListImageProducts = () => {
       <div className="eva-banner-container overflow-hidden max-h-[500px] mb-6  px-5 ">
         <LazyLoadImage
           src="https://www.projectgunpla.com/evangelion/hero.png"
-          placeholderSrc={Logo}
+          placeholderSrc={LoaderImage}
           alt="eva-banner"
           className="object-cover h-[100%] w-[100%]"
         />
@@ -42,7 +42,7 @@ const ListImageProducts = () => {
               key={product.id}
               src={product.src}
               alt={product.alt}
-              placeholderSrc={Logo}
+              placeholderSrc={LoaderImage}
               title={product.alt}
               className="object-cover"
             />
@@ -50,7 +50,7 @@ const ListImageProducts = () => {
       </div>
       {listProductData.length !== dataProducts.length && (
         <button
-          className="mt-8 py-3 px-6 ease-in duration-200 rounded-full text-white bg-red-300 hover:underline active:bg-red-400  hover:ring-2 hover:ring-red-400 "
+          className="mt-8 py-3 px-6 ease-in duration-200 rounded-full text-white bg-gradient-to-tl from-blue-300 via-purple-400 to-red-300 hover:underline active:bg-violet-300  hover:ring-2 hover:ring-sky-300 active:ring-violet-400 "
           onClick={loadMore}
         >
           More Product

@@ -16,7 +16,7 @@ const PageTwo = () => {
   };
 
   return (
-    <div className="about-container bg-gray-700 min-h-screen mt-10 w-full">
+    <div className="line-grid-container bg-gray-700 min-h-screen mt-10 w-full">
       <div className="containers  py-10 px-3 flex justify-center items-center flex-col">
         <h1 className="font-lobster font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-400 to-red-300 ">
           About us
