@@ -20,7 +20,9 @@ const ListImageProducts = () => {
 
   const loadMore = () => {
     const moreData = listProductData.slice(4);
-    setDataProducts((prevData) => [...prevData, ...moreData]);
+    setTimeout(() => {
+      setDataProducts((prevData) => [...prevData, ...moreData]);
+    }, 500);
   };
 
   return (
@@ -48,7 +50,7 @@ const ListImageProducts = () => {
       </div>
       {listProductData.length !== dataProducts.length ? (
         <button
-          className="mt-8 py-3 px-6 delay-75 text-white bg-red-300 hover:bg-violet-300 active:bg-red-300 rounded-full"
+          className="mt-8 py-3 px-6 delay-75 text-white bg-red-300 hover:underline active:bg-red-400 rounded-full"
           onClick={loadMore}
         >
           More Product
