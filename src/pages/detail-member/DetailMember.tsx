@@ -79,7 +79,7 @@ const DetailUser = () => {
               alt={imageGundam[0]?.alt}
               title={imageGundam[0]?.alt}
               placeholderSrc={LoaderImage}
-              className="lg:min-w-[500px] shadow-2xl"
+              className="lg:min-w-[500px] shadow-lg"
             />
           </div>
         </div>
