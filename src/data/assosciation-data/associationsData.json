@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nameAssociation": "Bell Association",
+    "image": "src/assets/logo-association/bell-association.png",
+    "description": "Get started with Bell-G-System and earn the Bell-G-System Associate certification!",
+    "gradientStart": "#4324BD",
+    "gradientFinish": "#50abdd"
+  },
+  {
+    "id": 2,
+    "nameAssociation": "AE Association",
+    "image": "src/assets/logo-association/ae-association.png",
+    "description": "Get started with AE-G-System and earn the AE-G-System Associate certification!",
+    "gradientStart": "#4324BD",
+    "gradientFinish": "#50abdd"
+  },
+  {
+    "id": 3,
+    "nameAssociation": "Earth Association",
+    "image": "src/assets/logo-association/earth-association.png",
+    "description": "Get started with Earth-G-System and earn the Earth-G-System Associate certification!",
+    "gradientStart": "#4324BD",
+    "gradientFinish": "#50abdd"
+  },
+  {
+    "id": 4,
+    "nameAssociation": "ZAFT Association",
+    "image": "src/assets/logo-association/zaft-association.webp",
+    "description": "Get started with ZAFT-G-System and earn the ZAFT-G-System Associate certification!",
+    "gradientStart": "#4324BD",
+    "gradientFinish": "#50abdd"
+  },
+  {
+    "id": 5,
+    "nameAssociation": "Tekadan Association",
+    "image": "src/assets/logo-association/tekadan-association.png",
+    "description": "Get started with Tekadan-G-System and earn the Tekadan-G-System Associate certification!",
+    "gradientStart": "#4324BD",
+    "gradientFinish": "#50abdd"
+  },
+  {
+    "id": 6,
+    "nameAssociation": "Gjalarhorn Association",
+    "image": "src/assets/logo-association/blue-horse-association.png",
+    "description": "Get started with Gjalarhorn-G-System and earn the Gjalarhorn-G-System Associate certification!",
+    "gradientStart": "#4324BD",
+    "gradientFinish": "#50abdd"
+  }
+]
