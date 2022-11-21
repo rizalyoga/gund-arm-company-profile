@@ -8,3 +8,14 @@
   max-width: 1200px;
   padding: 12px;
 }
+
+.about-container {
+  background-image: url(./assets/background-image/bgline2.svg);
+}
+
+.main-container {
+  background-size: auto;
+  background-image: url(./assets/background-image/tailwind-rainbow.jpg);
+  background-repeat: repeat;
+  background-position-x: 200px;
+}

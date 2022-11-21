@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { linkTabHoverStyle } from "./Styles";
+import { linkTabHoverStyle } from "../landing-page/StylesTab";
 
 const Homepage: FC = () => {
   return (

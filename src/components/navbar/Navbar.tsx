@@ -8,12 +8,10 @@ import "./Navbar.scss";
 import { linkHoverStyle } from "./Styles";
 
 const Navbar: FC = () => {
-  const { pathname } = useLocation();
-
   const handleClick = (event: React.MouseEvent<Element, MouseEvent>): void => {
     const target = event.target as Element;
     if (target.className.includes("active")) {
-      console.log("Active MIN");
+      console.log("");
     }
   };
   return (

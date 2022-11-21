@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { detailDataUser } from "../../../data/getDetailDataUser";
-import { Users } from "../../../data/getDataUsers";
+import { detailDataUser } from "../../data/getDetailDataUser";
+import { Users } from "../../data/getDataUsers";
+import Loading from "../../components/common/loading/Loading";
 
 const DetailUser = () => {
   const [dataDetailFromUser, setDataDetailFromUser] = useState<
@@ -19,11 +20,7 @@ const DetailUser = () => {
   }, []);
 
   if (loading) {
-    return (
-      <div className="containers absolute min-h-screen min-w-[100%] bg-yellow-400 flex justify-center items-center ">
-        <h1 className="text-xl text-white font-bold">Loading...</h1>
-      </div>
-    );
+    return <Loading />;
   }
 
   return (
