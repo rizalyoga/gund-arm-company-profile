@@ -8,6 +8,7 @@ import "./LandingPage.scss";
 // Component
 import CardAssociation from "../../components/common/cards/card-association/CardAssociation";
 import HeroSection from "../../components/common/hero-section/HeroSection";
+import TopScrollButton from "../../components/common/top-scroll-button/TopScrollButton";
 
 const ListImageProducts = lazy(
   () =>
@@ -96,6 +97,7 @@ const LandingPage: FC = () => {
           title="Gundam Video"
         />
       </div>
+      <TopScrollButton />
     </div>
   );
 };
