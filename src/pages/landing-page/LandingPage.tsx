@@ -8,6 +8,7 @@ import "./LandingPage.scss";
 // Component
 import CardAssociation from "../../components/common/cards/card-association/CardAssociation";
 import HeroSection from "../../components/common/hero-section/HeroSection";
+
 const ListImageProducts = lazy(
   () =>
     import(
@@ -87,7 +88,7 @@ const LandingPage: FC = () => {
         </Suspense>
 
         <iframe
-          className="xl:min-h-[600px] lg:min-h-[480px] md:min-h-[380px] min-h-[300px] w-[100%] mt-6"
+          className="mb-6 xl:min-h-[600px] lg:min-h-[480px] md:min-h-[380px] min-h-[300px] w-[100%] mt-6"
           src="https://www.youtube.com/embed/7-5IRey5wtI"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
