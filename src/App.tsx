@@ -18,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div className="main-container min-h-screen">
+      <div className="main-container min-h-screen overflow-hidden">
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<LandingPage />}>
