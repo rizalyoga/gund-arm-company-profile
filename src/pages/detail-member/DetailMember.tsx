@@ -46,14 +46,17 @@ const DetailUser = () => {
     }
   };
 
+  const classForSetVideo =
+    "absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2";
+
   if (loading) {
     return <Loading />;
   }
 
   return (
     <div className="line-grid-container bg-gray-700 min-h-screen">
-      <div className="containers mt-10 text-white text-left">
-        <div className="inner-wrapper line-grid-container bg-slate-400 min-h-[90vh] mt-8 p-5 font-audiowide rounded-md flex justify-between lg:flex-row  md:flex-col md:gap-4 max-sm:flex-col ">
+      <div className=" containers m-auto w-full mt-10 text-white text-left">
+        <div className="inner-wrapper line-grid-container bg-slate-400 min-h-[90vh] mt-8 p-5 font-audiowide rounded-md flex justify-between lg:flex-row  md:flex-col md:gap-4 max-sm:flex-col shadow-md shadow-slate-300 ">
           <div className="left-content flex flex-col flex-wrap basis-1/2 z-10 md:basis-2/5">
             <p className={headingStyle}>ID MEMBER : </p>
             <p className={paragraphStyle}>{addZeroToID(Number(id))}</p>
@@ -71,6 +74,8 @@ const DetailUser = () => {
             <p className={paragraphStyle}>{dataDetailFromUser?.company.name}</p>
             <p className={headingStyle}>WEBSITE : </p>
             <p className={paragraphStyle}>{dataDetailFromUser?.website}</p>
+            <p className={headingStyle}>Gundam : </p>
+            <p className={paragraphStyle}>{imageGundam[0]?.alt}</p>
             <hr className="my-4" />
           </div>
           <div className="right-content md:flex md:justify-center md:w-full max-sm:flex max-sm:justify-center basis-1/2">
@@ -79,11 +84,18 @@ const DetailUser = () => {
               alt={imageGundam[0]?.alt}
               title={imageGundam[0]?.alt}
               placeholderSrc={LoaderImage}
-              className="lg:min-w-[500px] shadow-lg"
+              className="lg:min-w-[500px] shadow-lg rounded-md hover:scale-105 ease-in-out duration-300 mt-1"
             />
           </div>
         </div>
       </div>
+      {/* <video autoPlay loop muted className="">
+        <source
+          src="https://object-web.gundamevolution.com/video/c7a40e14faf448e5a0cc499c4e8ccfe6811ad389d20d414294162d2d892e9edb.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video> */}
     </div>
   );
 };

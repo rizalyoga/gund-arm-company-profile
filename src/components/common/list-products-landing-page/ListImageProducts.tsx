@@ -26,7 +26,7 @@ const ListImageProducts = () => {
   };
 
   return (
-    <section className="machines-wrapper duration-300 py-6 rounded-sm bg-gradient-to-br from-gray-100 via-gray-300 to-white ">
+    <section className="machines-wrapper duration-300 py-6 rounded-sm bg-gradient-to-b from-gray-100 via-gray-300 to-[#F9FAFC] relative">
       <div className="eva-banner-container overflow-hidden max-h-[500px] mb-6  px-5 ">
         <LazyLoadImage
           src="https://www.projectgunpla.com/evangelion/hero.png"
@@ -44,16 +44,16 @@ const ListImageProducts = () => {
               alt={product.alt}
               placeholderSrc={LoaderImage}
               title={product.alt}
-              className="object-cover"
+              className="object-cover hover:scale-105 ease-in-out duration-300 "
             />
           ))}
       </div>
       {listProductData.length !== dataProducts.length && (
         <button
-          className="mt-8 py-3 px-6 ease-in duration-200 rounded-full text-white bg-gradient-to-tl from-blue-300 via-purple-400 to-red-300 hover:underline active:bg-violet-300  hover:ring-2 hover:ring-sky-300 active:ring-violet-400 "
+          className="relative mt-8 py-3 px-6 ease-in duration-200 rounded-full text-white bg-gradient-to-tl from-blue-300 via-purple-400 to-red-300 hover:underline active:bg-violet-300  hover:ring-2 hover:ring-sky-300 active:ring-violet-400 "
           onClick={loadMore}
         >
-          More Product
+          Show More
         </button>
       )}
     </section>
