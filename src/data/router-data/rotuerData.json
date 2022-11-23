@@ -1,0 +1,14 @@
+[
+  {
+    "menu": "home",
+    "link": "/"
+  },
+  {
+    "menu": "about",
+    "link": "/about"
+  },
+  {
+    "menu": "login",
+    "link": "/login"
+  }
+]

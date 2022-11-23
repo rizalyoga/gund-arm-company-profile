@@ -27,9 +27,12 @@ const LoginForm = () => {
     };
 
     if (dataUser.email && dataUser.password.length > 5) {
+      setEmail("");
+      setPassword("");
       alert(`EMAIL : ${dataUser.email} \nPASSWORD : ${dataUser.password} `);
     } else if (dataUser.email && dataUser.password.length <= 5) {
       alert("Password length minimum 6 character !");
+      setPassword("");
     } else {
       alert("Please input field !");
     }

@@ -9,7 +9,6 @@ import "./LandingPage.scss";
 import CardAssociation from "../../components/common/cards/card-association/CardAssociation";
 import HeroSection from "../../components/common/hero-section/HeroSection";
 import TopScrollButton from "../../components/common/top-scroll-button/TopScrollButton";
-
 const ListImageProducts = lazy(
   () =>
     import(
@@ -21,6 +20,9 @@ const ListImageProducts = lazy(
 import listAssociation from "../../data/assosciation-data/associationsData.json";
 
 const LandingPage: FC = () => {
+  const titleSectionStyle: string =
+    "py-8 font-extrabold text-[2rem] text-gray-800 text-left";
+
   return (
     <div className="py-10 flex justify-center items-center flex-col">
       {/* =====================HERO SECTION===================== */}
@@ -34,7 +36,7 @@ const LandingPage: FC = () => {
       </span>
 
       <div className="containers">
-        <div className="content-container w-[100%] my-10">
+        <div className="content-container w-[100%] mt-10">
           {/* =====================MISSION SECTION===================== */}
           <h2 className="pb-8 font-extrabold text-[2rem] text-gray-800">
             OUR MISSIONS
@@ -56,10 +58,8 @@ const LandingPage: FC = () => {
         </div>
 
         {/* =====================LIST ASSOCIATIONS SECTION===================== */}
-        <h2 className="pb-8 font-extrabold text-[2rem] text-gray-800 text-left">
-          BECOME A CERTIFIED G-SYSTEM
-        </h2>
-        <div className="association-container gap-4 grid lg:grid-cols-3 md:grid-cols-2 max-sm:grid-cols-1">
+        <h2 className={titleSectionStyle}>BECOME A CERTIFIED G-SYSTEM</h2>
+        <section className="association-wrapper gap-4 grid lg:grid-cols-3 md:grid-cols-2 max-sm:grid-cols-1">
           {listAssociation &&
             listAssociation.map((listAssociation) => (
               <CardAssociation
@@ -72,12 +72,10 @@ const LandingPage: FC = () => {
                 gradientFinish={listAssociation.gradientFinish}
               />
             ))}
-        </div>
+        </section>
 
         {/* =====================PRODUCTS SECTION===================== */}
-        <h2 className="py-8 font-extrabold text-left text-[2rem] text-gray-800">
-          PRODUCTS
-        </h2>
+        <h2 className={titleSectionStyle}>PRODUCTS</h2>
         <Suspense
           fallback={
             <div className=" flex justify-center items-center">

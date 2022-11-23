@@ -2,6 +2,7 @@ import { useLocation, Link } from "react-router-dom";
 import "./Footer.scss";
 
 import CompanyIcon from "../../assets/icons/gundam-icon.png";
+import DataRouter from "../../data/router-data/rotuerData.json";
 
 const Footer = () => {
   const { pathname } = useLocation();
@@ -21,21 +22,13 @@ const Footer = () => {
         </div>
         <div className="right-conten">
           <ul className="flex gap-3 justify-evenly mb-2 font-semibold text-slate-700 duration-200 ease-in">
-            <li>
-              <Link to="/" className="hover:text-slate-500">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="about" className="hover:text-slate-500">
-                About us
-              </Link>
-            </li>
-            <li>
-              <Link to="login" className="hover:text-slate-500">
-                Login
-              </Link>
-            </li>
+            {DataRouter.map((dataRouter) => (
+              <li key={dataRouter.link}>
+                <Link to={dataRouter.link} className="hover:text-slate-500">
+                  {dataRouter.menu}
+                </Link>
+              </li>
+            ))}
           </ul>
           <div className=" flex gap-2 basis-1/2 md:basis-3/5 justify-end md:mr-[12px] max-sm:w-full max-sm:justify-start max-sm:mb-[-100px]">
             <input
