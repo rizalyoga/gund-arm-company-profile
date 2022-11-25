@@ -12,7 +12,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="footer-container min-h-[200px] text-gray-700 relative bottom-0 z-10 w-[100%] grid place-items-center overflow-hidden ">
+    <footer className="footer-container min-h-[200px] text-gray-700 w-[100%] grid place-items-center overflow-hidden ">
       <div className="inner-wrapper containers  h-full w-full flex justify-between items-center px-0 max-sm:px-2 max-sm:flex-col-reverse ">
         <div className="left-content h-[100%] flex basis-1/2 md:basis-2/5 items-center max-sm:w-full">
           <img src={CompanyIcon} alt="company-icon" className="max-sm:-ml-4 " />
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

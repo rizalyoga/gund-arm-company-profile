@@ -10,9 +10,12 @@ import Content3 from "./components/home-contents/content-3/Content3";
 import UnknownPage from "./pages/unknown-page/UnknownPage";
 import Loading from "./components/common/loading/Loading";
 
-const AboutPage = lazy(() => import("./pages/about/AboutPage"));
-const LoginPage = lazy(() => import("./pages/login/LoginPage"));
-const DetailMember = lazy(() => import("./pages/detail-member/DetailMember"));
+const AboutPage = lazy(() => import("./pages/about-page/AboutPage"));
+const LoginPage = lazy(() => import("./pages/login-page/LoginPage"));
+const DashboardPage = lazy(() => import("./pages/dashboard-page/Dashboard"));
+const DetailMemberPage = lazy(
+  () => import("./pages/detail-member-page/DetailMember")
+);
 
 function App() {
   return (
@@ -29,7 +32,8 @@ function App() {
             </Route>
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/about/member/:id" element={<DetailMember />} />
+            <Route path="/about/member/:id" element={<DetailMemberPage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="*" element={<UnknownPage />} />
           </Routes>
         </Suspense>
