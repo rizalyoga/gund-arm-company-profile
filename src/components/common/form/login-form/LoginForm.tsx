@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import ImageIcon from "../../../../assets/icons/gundam-icon.png";
 import { loginRegisterOnSubmit } from "./onSubmitEvent";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 // Styles
 import {
@@ -20,8 +21,12 @@ export interface LoginAndRegisterDataType {
 const LoginForm = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [authing, setAuthing] = useState<boolean>(false);
 
   const { pathname } = useLocation();
+
+  const auth = getAuth();
+  const navigate = useNavigate();
 
   const onSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
@@ -36,6 +41,20 @@ const LoginForm = () => {
 
     setEmail("");
     setPassword("");
+  };
+
+  const loginWithGoogle = async () => {
+    setAuthing(true);
+
+    signInWithPopup(auth, new GoogleAuthProvider())
+      .then((response) => {
+        console.log(response.user.uid);
+        navigate("/dashboard");
+      })
+      .catch((error) => {
+        console.error(error);
+        setAuthing(false);
+      });
   };
 
   return (
@@ -100,7 +119,21 @@ const LoginForm = () => {
         )}
 
         {pathname !== "/register" ? (
-          <input className={buttonElementStyles} type="submit" value="Login" />
+          <>
+            <input
+              className={buttonElementStyles}
+              type="submit"
+              value="Login"
+            />
+            <div className="h-[2px] rounded-sm w-full bg-slate-200 mt-[-20px] mb-[15px]"></div>
+            <input
+              className={`${buttonElementStyles} mt-0 text-center`}
+              value="Login with google"
+              disabled={authing}
+              onClick={() => loginWithGoogle()}
+              type="submit"
+            />
+          </>
         ) : (
           <input
             className={buttonElementStyles}
