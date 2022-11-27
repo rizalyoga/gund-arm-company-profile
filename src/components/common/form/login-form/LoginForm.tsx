@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useLocation, Link } from "react-router-dom";
 import ImageIcon from "../../../../assets/icons/gundam-icon.png";
+import { loginRegisterOnSubmit } from "./onSubmitEvent";
 
 // Styles
 import {
@@ -9,33 +11,31 @@ import {
   labelElementStyles,
 } from "./LoginFormStyles";
 
-interface LoginDataType {
+export interface LoginAndRegisterDataType {
   email: string;
   password: string;
+  pathname?: string;
 }
 
 const LoginForm = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  const { pathname } = useLocation();
+
   const onSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
 
-    const dataUser: LoginDataType = {
-      email,
-      password,
+    const dataUser: LoginAndRegisterDataType = {
+      email: email,
+      password: password,
+      pathname: pathname,
     };
 
-    if (dataUser.email && dataUser.password.length > 5) {
-      setEmail("");
-      setPassword("");
-      alert(`EMAIL : ${dataUser.email} \nPASSWORD : ${dataUser.password} `);
-    } else if (dataUser.email && dataUser.password.length <= 5) {
-      alert("Password length minimum 6 character !");
-      setPassword("");
-    } else {
-      alert("Please input field !");
-    }
+    loginRegisterOnSubmit(dataUser);
+
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -83,13 +83,31 @@ const LoginForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <a
-          href="#"
-          className="float-left text-sm py-2 hover:text-blue-500 hover:underline"
-        >
-          Forget Password ?
-        </a>
-        <input className={buttonElementStyles} type="submit" value="Login" />
+        {pathname === "/login" ? (
+          <span className="float-left text-sm py-2 ">
+            Don't have acount ?
+            <Link to="/register" className="text-blue-500 hover:underline">
+              {" Register here"}
+            </Link>
+          </span>
+        ) : (
+          <span className="float-left text-sm py-2 ">
+            Already have acount ?
+            <Link to="/login" className="text-blue-500 hover:underline">
+              {" Login"}
+            </Link>
+          </span>
+        )}
+
+        {pathname !== "/register" ? (
+          <input className={buttonElementStyles} type="submit" value="Login" />
+        ) : (
+          <input
+            className={buttonElementStyles}
+            type="submit"
+            value="Register"
+          />
+        )}
       </form>
     </div>
   );

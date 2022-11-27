@@ -7,7 +7,11 @@ import DataRouter from "../../data/router-data/rotuerData.json";
 const Footer = () => {
   const { pathname } = useLocation();
 
-  if (pathname === "/login" || pathname.includes("/member")) {
+  if (
+    pathname === "/login" ||
+    pathname === "/register" ||
+    pathname.includes("/member")
+  ) {
     return <></>;
   }
 

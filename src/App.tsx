@@ -32,6 +32,7 @@ function App() {
             </Route>
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<LoginPage />} />
             <Route path="/about/member/:id" element={<DetailMemberPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="*" element={<UnknownPage />} />
