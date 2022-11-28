@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import ImageIcon from "../../../../assets/icons/gundam-icon.png";
 import { loginRegisterOnSubmit } from "./onSubmitEvent";
@@ -16,6 +16,9 @@ export interface LoginAndRegisterDataType {
   email: string;
   password: string;
   pathname?: string;
+  setEmail?: Dispatch<SetStateAction<string>> | undefined;
+  setPassword?: Dispatch<SetStateAction<string>> | undefined;
+  setAuthing?: Dispatch<SetStateAction<boolean>>;
 }
 
 const LoginForm = () => {
@@ -35,12 +38,12 @@ const LoginForm = () => {
       email: email,
       password: password,
       pathname: pathname,
+      setEmail: setEmail,
+      setPassword: setPassword,
+      setAuthing: setAuthing,
     };
 
     loginRegisterOnSubmit(dataUser);
-
-    setEmail("");
-    setPassword("");
   };
 
   const loginWithGoogle = async () => {
@@ -48,7 +51,7 @@ const LoginForm = () => {
 
     signInWithPopup(auth, new GoogleAuthProvider())
       .then((response) => {
-        console.log(response.user.uid);
+        sessionStorage.setItem("tokenUID", response.user.uid);
         navigate("/dashboard");
       })
       .catch((error) => {
@@ -121,9 +124,12 @@ const LoginForm = () => {
         {pathname !== "/register" ? (
           <>
             <input
-              className={buttonElementStyles}
+              className={`${buttonElementStyles} ${
+                authing ? "bg-gray-500" : ""
+              }`}
               type="submit"
-              value="Login"
+              value={authing ? "Loading..." : "Login"}
+              disabled={authing}
             />
             <div className="h-[2px] rounded-sm w-full bg-slate-200 mt-[-20px] mb-[15px]"></div>
             <input
@@ -136,9 +142,10 @@ const LoginForm = () => {
           </>
         ) : (
           <input
-            className={buttonElementStyles}
+            className={`${buttonElementStyles} ${authing ? "bg-gray-500" : ""}`}
             type="submit"
-            value="Register"
+            value={authing ? "Loading..." : "Register"}
+            disabled={authing}
           />
         )}
       </form>

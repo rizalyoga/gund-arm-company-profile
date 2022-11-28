@@ -10,6 +10,7 @@ const DashboardPage: FC = () => {
   const signOutEvent = () => {
     setLoading(true);
     signOut(auth);
+    sessionStorage.clear();
   };
 
   if (loading) {

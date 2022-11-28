@@ -14,23 +14,21 @@ const ProtectedRoute = ({ children }: ChildrenProps) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    authCheck();
+    const authCheck = onAuthStateChanged(auth, (user) => {
+      setLoading(true);
+
+      if (user) {
+        setLoading(false);
+        navigate("/dashboard");
+      } else {
+        console.warn("You Unauthorized");
+        setLoading(false);
+        navigate("/login");
+      }
+    });
 
     return () => authCheck();
   }, [auth]);
-
-  const authCheck = onAuthStateChanged(auth, (user) => {
-    setLoading(true);
-
-    if (user) {
-      setLoading(false);
-      navigate("/dashboard");
-    } else {
-      console.log("You Unauthorized");
-      setLoading(false);
-      navigate("/login");
-    }
-  });
 
   if (loading) {
     return <Loading />;
