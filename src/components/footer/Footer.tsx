@@ -2,16 +2,21 @@ import { useLocation, Link } from "react-router-dom";
 import "./Footer.scss";
 
 import CompanyIcon from "../../assets/icons/gundam-icon.png";
+import DataRouter from "../../data/router-data/rotuerData.json";
 
 const Footer = () => {
   const { pathname } = useLocation();
 
-  if (pathname === "/login" || pathname.includes("/member")) {
+  if (
+    pathname === "/login" ||
+    pathname === "/register" ||
+    pathname.includes("/member")
+  ) {
     return <></>;
   }
 
   return (
-    <div className="footer-container min-h-[200px] text-gray-700 relative bottom-0 z-10 w-[100%] grid place-items-center overflow-hidden ">
+    <footer className="footer-container min-h-[200px] text-gray-700 w-[100%] grid place-items-center overflow-hidden ">
       <div className="inner-wrapper containers  h-full w-full flex justify-between items-center px-0 max-sm:px-2 max-sm:flex-col-reverse ">
         <div className="left-content h-[100%] flex basis-1/2 md:basis-2/5 items-center max-sm:w-full">
           <img src={CompanyIcon} alt="company-icon" className="max-sm:-ml-4 " />
@@ -21,21 +26,13 @@ const Footer = () => {
         </div>
         <div className="right-conten">
           <ul className="flex gap-3 justify-evenly mb-2 font-semibold text-slate-700 duration-200 ease-in">
-            <li>
-              <Link to="/" className="hover:text-slate-500">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="about" className="hover:text-slate-500">
-                About us
-              </Link>
-            </li>
-            <li>
-              <Link to="login" className="hover:text-slate-500">
-                Login
-              </Link>
-            </li>
+            {DataRouter.map((dataRouter) => (
+              <li key={dataRouter.link}>
+                <Link to={dataRouter.link} className="hover:text-slate-500">
+                  {dataRouter.menu}
+                </Link>
+              </li>
+            ))}
           </ul>
           <div className=" flex gap-2 basis-1/2 md:basis-3/5 justify-end md:mr-[12px] max-sm:w-full max-sm:justify-start max-sm:mb-[-100px]">
             <input
@@ -49,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

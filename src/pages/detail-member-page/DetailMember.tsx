@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { detailDataUser } from "../../data/getDetailDataUser";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Users } from "../../data/getDataUsers";
-import { headingStyle, paragraphStyle } from "./Styles";
-import Loading from "../../components/common/loading/Loading";
-import LoaderImage from "../../assets/icons/loader-image.webp";
+import { getDetailDataMember } from "../../data/member-data/getDetailDataMember";
+
+// Data
 import dataImageGundam from "../../data/product-data/productData.json";
 import { DataProductsProps as DataImageProps } from "../../components/common/list-products-landing-page/ListImageProducts";
 
+// Component
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import { headingStyle, paragraphStyle } from "./Styles";
+import Loading from "../../components/common/loading/Loading";
+import LoaderImage from "../../assets/icons/loader-image.webp";
+
+// Type
+import { AllMemberDataType } from "../../data/member-data/getDataAllMember";
+
 const DetailUser = () => {
   const [dataDetailFromUser, setDataDetailFromUser] = useState<
-    Users | undefined
+    AllMemberDataType | undefined
   >();
   const [imageGundam, setImageGundam] = useState<DataImageProps[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
@@ -20,7 +26,7 @@ const DetailUser = () => {
   useEffect(() => {
     setLoading(true);
     matchImageIdWithMemberId();
-    detailDataUser(id).then((data) => {
+    getDetailDataMember(id).then((data) => {
       setDataDetailFromUser(data);
       setLoading(false);
     });

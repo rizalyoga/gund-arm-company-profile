@@ -1,9 +1,9 @@
 import axios from "axios";
-import { Users } from "./getDataUsers";
+import { AllMemberDataType } from "./getDataAllMember";
 
-export const detailDataUser = async (id: string | undefined) => {
+export const getDetailDataMember = async (id: string | undefined) => {
   try {
-    const response = await axios.get<Users>(
+    const response = await axios.get<AllMemberDataType>(
       `https://jsonplaceholder.typicode.com/users/${id}`
     );
 

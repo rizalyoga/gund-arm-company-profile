@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { datas, Users } from "../../data/getDataUsers";
+import {
+  getDataAllMember,
+  AllMemberDataType,
+} from "../../data/member-data/getDataAllMember";
 
 const PageTwo = () => {
-  const [dataUsers, setDataUsers] = useState<Users[] | undefined>([]);
+  const [dataUsers, setDataUsers] = useState<AllMemberDataType[] | undefined>(
+    []
+  );
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    datas().then((data) => setDataUsers(data));
+    getDataAllMember().then((data) => setDataUsers(data));
   }, []);
 
   const toDetailMember = (id: number) => {

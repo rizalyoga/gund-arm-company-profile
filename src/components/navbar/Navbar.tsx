@@ -3,6 +3,9 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 import IconImage from "../../assets/icons/gundam-icon.png";
 
+// Data
+import RouterData from "../../data/router-data/rotuerData.json";
+
 // Styles
 import "./Navbar.scss";
 import { linkHoverStyle } from "./Styles";
@@ -39,21 +42,18 @@ const Navbar: FC = () => {
         </div>
         <div className="links">
           <ul className="flex gap-4 max-sm:gap-3">
-            <li className={linkHoverStyle} onClick={(e) => handleClick(e)}>
-              <NavLink className="nav-link" to="/">
-                Home
-              </NavLink>
-            </li>
-            <li className={linkHoverStyle} onClick={(e) => handleClick(e)}>
-              <NavLink className="nav-link" to="/about">
-                About
-              </NavLink>
-            </li>
-            <li className={linkHoverStyle} onClick={(e) => handleClick(e)}>
-              <NavLink className="nav-link" to="/login">
-                Login
-              </NavLink>
-            </li>
+            {RouterData &&
+              RouterData.map((dataRouter) => (
+                <li
+                  key={dataRouter.link}
+                  className={linkHoverStyle}
+                  onClick={(e) => handleClick(e)}
+                >
+                  <NavLink className="nav-link" to={dataRouter.link}>
+                    {dataRouter.menu}
+                  </NavLink>
+                </li>
+              ))}
           </ul>
         </div>
       </div>

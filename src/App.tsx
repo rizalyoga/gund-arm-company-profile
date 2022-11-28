@@ -1,6 +1,8 @@
 import { lazy, Suspense } from "react";
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { initializeApp } from "firebase/app";
+import { firebaseConfig } from "./config/firebase";
+import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import LandingPage from "./pages/landing-page/LandingPage";
@@ -9,10 +11,16 @@ import Content2 from "./components/home-contents/content-2/Content2";
 import Content3 from "./components/home-contents/content-3/Content3";
 import UnknownPage from "./pages/unknown-page/UnknownPage";
 import Loading from "./components/common/loading/Loading";
+import ProtectedRoute from "./components/protected-route/ProtectedRoute";
 
-const AboutPage = lazy(() => import("./pages/about/AboutPage"));
-const LoginPage = lazy(() => import("./pages/login/LoginPage"));
-const DetailMember = lazy(() => import("./pages/detail-member/DetailMember"));
+const AboutPage = lazy(() => import("./pages/about-page/AboutPage"));
+const LoginPage = lazy(() => import("./pages/login-page/LoginPage"));
+const DashboardPage = lazy(() => import("./pages/dashboard-page/Dashboard"));
+const DetailMemberPage = lazy(
+  () => import("./pages/detail-member-page/DetailMember")
+);
+
+initializeApp(firebaseConfig.config);
 
 function App() {
   return (
@@ -29,7 +37,16 @@ function App() {
             </Route>
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/about/member/:id" element={<DetailMember />} />
+            <Route path="/register" element={<LoginPage />} />
+            <Route path="/about/member/:id" element={<DetailMemberPage />} />
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute>
+                  <DashboardPage />
+                </ProtectedRoute>
+              }
+            />
             <Route path="*" element={<UnknownPage />} />
           </Routes>
         </Suspense>

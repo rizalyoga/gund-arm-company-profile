@@ -19,7 +19,7 @@ type CompanyObject = {
   bs: string;
 };
 
-export type Users = {
+export type AllMemberDataType = {
   id: number;
   name: string;
   username: string;
@@ -30,9 +30,9 @@ export type Users = {
   company: CompanyObject;
 };
 
-export const datas = async () => {
+export const getDataAllMember = async () => {
   try {
-    const response = await axios.get<Users[]>(
+    const response = await axios.get<AllMemberDataType[]>(
       "https://jsonplaceholder.typicode.com/users"
     );
 
