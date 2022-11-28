@@ -28,7 +28,7 @@ const TopScrollButton = () => {
     <button
       className={
         visible
-          ? "fixed z-50 bottom-0 right-0 m-2 w-[50px] animate-bounce"
+          ? "fixed z-50 bottom-0 right-0 m-2  w-[50px] animate-bounce"
           : "invisible"
       }
       onClick={scrollToTop}

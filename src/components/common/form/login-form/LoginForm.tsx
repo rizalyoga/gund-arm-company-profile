@@ -7,6 +7,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // Styles
 import {
   buttonElementStyles,
+  disableButtonElementStyles,
   divChildrenOfFormElementStyles,
   inputElementStyles,
   labelElementStyles,
@@ -56,6 +57,7 @@ const LoginForm = () => {
       })
       .catch((error) => {
         console.error(error);
+        alert(error);
         setAuthing(false);
       });
   };
@@ -116,7 +118,7 @@ const LoginForm = () => {
           <span className="float-left text-sm py-2 ">
             Already have acount ?
             <Link to="/login" className="text-blue-500 hover:underline">
-              {" Login"}
+              {" Login here"}
             </Link>
           </span>
         )}
@@ -124,9 +126,9 @@ const LoginForm = () => {
         {pathname !== "/register" ? (
           <>
             <input
-              className={`${buttonElementStyles} ${
-                authing ? "bg-gray-500" : ""
-              }`}
+              className={
+                authing ? disableButtonElementStyles : buttonElementStyles
+              }
               type="submit"
               value={authing ? "Loading..." : "Login"}
               disabled={authing}
@@ -142,7 +144,9 @@ const LoginForm = () => {
           </>
         ) : (
           <input
-            className={`${buttonElementStyles} ${authing ? "bg-gray-500" : ""}`}
+            className={
+              authing ? disableButtonElementStyles : buttonElementStyles
+            }
             type="submit"
             value={authing ? "Loading..." : "Register"}
             disabled={authing}

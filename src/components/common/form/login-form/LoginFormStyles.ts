@@ -6,4 +6,7 @@ export const inputElementStyles: string =
 export const buttonElementStyles: string =
   "mr-[75%] w-full bg-blue-400 hover:bg-blue-500 active:bg-blue-400 text-white mt-3 mb-10 py-2 px-6 rounded-md cursor-pointer";
 
+export const disableButtonElementStyles: string =
+  "mr-[75%] w-full bg-gray-500 text-white mt-3 mb-10 py-2 px-6 rounded-md";
+
 export const divChildrenOfFormElementStyles: string = "flex flex-col py-2";

@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { getAuth, signOut } from "firebase/auth";
 
 import IconImage from "../../assets/icons/gundam-icon.png";
 
@@ -12,12 +13,29 @@ import { linkHoverStyle } from "./Styles";
 
 const Navbar: FC = () => {
   const navigate = useNavigate();
+  const token = sessionStorage.getItem("tokenUID");
+  const auth = getAuth();
 
   const handleClick = (event: React.MouseEvent<Element, MouseEvent>): void => {
     const target = event.target as Element;
     if (target.className.includes("active")) {
       console.log("");
     }
+  };
+
+  const hiddenNavbarMenu = (menu: string): boolean => {
+    if (token && menu === "Login") {
+      return true;
+    } else if (!token && menu === "Dashboard") {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const logOutHandler = () => {
+    signOut(auth);
+    sessionStorage.clear();
   };
 
   const toHomepage = () => {
@@ -48,12 +66,20 @@ const Navbar: FC = () => {
                   key={dataRouter.link}
                   className={linkHoverStyle}
                   onClick={(e) => handleClick(e)}
+                  hidden={hiddenNavbarMenu(dataRouter.menu)}
                 >
                   <NavLink className="nav-link" to={dataRouter.link}>
                     {dataRouter.menu}
                   </NavLink>
                 </li>
               ))}
+            <li
+              className={`${linkHoverStyle} cursor-pointer`}
+              hidden={token ? false : true}
+              onClick={logOutHandler}
+            >
+              Logout
+            </li>
           </ul>
         </div>
       </div>

@@ -1,14 +1,18 @@
 [
   {
-    "menu": "home",
+    "menu": "Home",
     "link": "/"
   },
   {
-    "menu": "about",
+    "menu": "About",
     "link": "/about"
   },
   {
-    "menu": "login",
+    "menu": "Login",
     "link": "/login"
+  },
+  {
+    "menu": "Dashboard",
+    "link": "/dashboard"
   }
 ]
