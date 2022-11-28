@@ -1,7 +1,18 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Waves from "../../components/animation/waves/Waves";
 import LoginForm from "../../components/common/form/login-form/LoginForm";
 
 const PageThree = () => {
+  const navigate = useNavigate();
+  const token = sessionStorage.getItem("tokenUID");
+
+  useEffect(() => {
+    if (token) {
+      navigate("/dashboard");
+    }
+  }, []);
+
   return (
     <>
       <div className=" min-h-screen bg-gradient-to-r from-red-400 to-violet-400">
