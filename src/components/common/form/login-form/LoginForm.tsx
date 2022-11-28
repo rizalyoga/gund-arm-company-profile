@@ -107,22 +107,14 @@ const LoginForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        {pathname === "/login" ? (
-          <span className="float-left text-sm py-2 ">
-            Don't have acount ?
-            <Link to="/register" className="text-blue-500 hover:underline">
-              {" Register here"}
-            </Link>
-          </span>
-        ) : (
-          <span className="float-left text-sm py-2 ">
-            Already have acount ?
-            <Link to="/login" className="text-blue-500 hover:underline">
-              {" Login here"}
-            </Link>
-          </span>
-        )}
-
+        <span
+          className="float-left text-sm py-2"
+          hidden={pathname === "/register" && true}
+        >
+          <a className="text-slate-500 hover:text-blue-500 hover:underline cursor-pointer">
+            Forgot password ?
+          </a>
+        </span>
         {pathname !== "/register" ? (
           <>
             <input
@@ -133,7 +125,7 @@ const LoginForm = () => {
               value={authing ? "Loading..." : "Login"}
               disabled={authing}
             />
-            <div className="h-[2px] rounded-sm w-full bg-slate-200 mt-[-20px] mb-[15px]"></div>
+            <div className="h-[1px] rounded-sm w-full bg-slate-200 mt-[-20px] mb-[18px]"></div>
             <input
               className={`${buttonElementStyles} mt-0 text-center`}
               value="Login with google"
@@ -152,6 +144,23 @@ const LoginForm = () => {
             disabled={authing}
           />
         )}
+        <div className="mt-[-20px] mb-[30px] w-full">
+          {pathname === "/login" ? (
+            <span className=" text-sm py-2 ">
+              Don't have an acount ?
+              <Link to="/register" className="text-blue-500 hover:underline">
+                {" Sign up "}
+              </Link>
+            </span>
+          ) : (
+            <span className=" text-sm py-2 ">
+              Already have acount ?
+              <Link to="/login" className="text-blue-500 hover:underline">
+                {" Login here"}
+              </Link>
+            </span>
+          )}
+        </div>
       </form>
     </div>
   );
