@@ -34,8 +34,11 @@ const Navbar: FC = () => {
   };
 
   const logOutHandler = () => {
-    signOut(auth);
-    sessionStorage.clear();
+    const doLogOut = window.confirm("Are you sure to log out ?");
+    if (doLogOut) {
+      signOut(auth);
+      sessionStorage.clear();
+    }
   };
 
   const toHomepage = () => {
