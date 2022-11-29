@@ -59,7 +59,7 @@ const ResetPasswordForm = () => {
         <div className={divChildrenOfFormElementStyles}>
           <input
             type="email"
-            className={inputElementStyles}
+            className={`${inputElementStyles} placeholder:text-center text-center`}
             placeholder="Your Email Address"
             title="email"
             name="email"
