@@ -42,8 +42,7 @@ const ResetPasswordForm = () => {
 
   return (
     <div
-      className="z-20 mt-4 mx-2 w-[400px] max-sm:w-[100%] min-h-[300px] rounded-md 
-      bg-white shadow-lg bg-clip-padding bg-opacity-60 border border-gray-200 "
+      className="z-20 mt-4 w-[400px] max-[430px]:w-[130%] max-[391px]:w-[120%] max-[320px]:w-full min-h-[330px] rounded-md bg-white shadow-lg bg-clip-padding bg-opacity-60 border border-gray-200 "
       style={{ backdropFilter: "blur(20px)" }}
     >
       <img
@@ -60,7 +59,7 @@ const ResetPasswordForm = () => {
         <div className={divChildrenOfFormElementStyles}>
           <input
             type="email"
-            className={inputElementStyles}
+            className={`${inputElementStyles} placeholder:text-center text-center`}
             placeholder="Your Email Address"
             title="email"
             name="email"
@@ -74,7 +73,7 @@ const ResetPasswordForm = () => {
           value={loading ? "Loading..." : "Reset Password"}
           disabled={loading}
         />
-        <span className="absolute mt-[-20px] m-auto left-0 right-0 text-slate-600">
+        <span className="absolute mt-[-20px] pb-4 m-auto left-0 right-0">
           Already have an account ?{" "}
           <Link to="/login" className="text-blue-600 hover:underline">
             Login

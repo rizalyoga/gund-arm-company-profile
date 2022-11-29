@@ -6,6 +6,8 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 // Styles
 import {
+  formStyleLoginEvent,
+  formStyleRegisterEvent,
   buttonElementStyles,
   disableButtonElementStyles,
   divChildrenOfFormElementStyles,
@@ -62,12 +64,16 @@ const LoginForm = () => {
       });
   };
 
+  const formStyle = (): string => {
+    if (pathname === "/register") {
+      return formStyleRegisterEvent;
+    }
+
+    return formStyleLoginEvent;
+  };
+
   return (
-    <div
-      className="z-20 mt-4 mx-2 w-[400px] max-sm:w-[100%] min-h-[400px] rounded-md 
-      bg-white shadow-lg bg-clip-padding bg-opacity-60 border border-gray-200"
-      style={{ backdropFilter: "blur(20px)" }}
-    >
+    <div className={formStyle()} style={{ backdropFilter: "blur(20px)" }}>
       <img
         src={ImageIcon}
         alt="icon-company"
@@ -108,7 +114,7 @@ const LoginForm = () => {
           />
         </div>
         <span
-          className="float-left text-sm py-2 text-slate-500"
+          className="float-left text-sm py-2"
           hidden={pathname === "/register" && true}
         >
           Forgot password ?
