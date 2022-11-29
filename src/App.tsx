@@ -14,7 +14,9 @@ import Loading from "./components/common/loading/Loading";
 import ProtectedRoute from "./components/protected-route/ProtectedRoute";
 
 const AboutPage = lazy(() => import("./pages/about-page/AboutPage"));
-const LoginPage = lazy(() => import("./pages/login-page/LoginPage"));
+const AuthenticationPage = lazy(
+  () => import("./pages/authentication-page/AuthenticationPage")
+);
 const DashboardPage = lazy(() => import("./pages/dashboard-page/Dashboard"));
 const DetailMemberPage = lazy(
   () => import("./pages/detail-member-page/DetailMember")
@@ -36,8 +38,9 @@ function App() {
               <Route path="content3" element={<Content3 />} />
             </Route>
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<LoginPage />} />
+            <Route path="/login" element={<AuthenticationPage />} />
+            <Route path="/reset-password" element={<AuthenticationPage />} />
+            <Route path="/register" element={<AuthenticationPage />} />
             <Route path="/about/member/:id" element={<DetailMemberPage />} />
             <Route
               path="/dashboard"

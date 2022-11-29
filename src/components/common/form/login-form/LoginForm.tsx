@@ -108,12 +108,16 @@ const LoginForm = () => {
           />
         </div>
         <span
-          className="float-left text-sm py-2"
+          className="float-left text-sm py-2 text-slate-500"
           hidden={pathname === "/register" && true}
         >
-          <a className="text-slate-500 hover:text-blue-500 hover:underline cursor-pointer">
-            Forgot password ?
-          </a>
+          Forgot password ?
+          <Link
+            to="/reset-password"
+            className="text-blue-500 hover:underline cursor-pointer"
+          >
+            {" Reset password"}
+          </Link>
         </span>
         {pathname !== "/register" ? (
           <>

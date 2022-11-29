@@ -10,6 +10,7 @@ const Footer = () => {
   if (
     pathname === "/login" ||
     pathname === "/register" ||
+    pathname === "/reset-password" ||
     pathname.includes("/member")
   ) {
     return <></>;
