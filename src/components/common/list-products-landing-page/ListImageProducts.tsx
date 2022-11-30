@@ -33,6 +33,7 @@ const ListImageProducts = () => {
           placeholderSrc={LoaderImage}
           alt="eva-banner"
           className="object-cover h-[100%] w-[100%]"
+          title="Evangelion"
         />
       </div>
       <div className="top-row-card-machine gap-6 grid lg:grid-cols-4 max-sm:grid-cols-1 md:grid-cols-2 px-5">
