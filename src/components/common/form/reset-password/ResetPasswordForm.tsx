@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ImageIcon from "../../../../assets/icons/gundam-icon.png";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
@@ -13,6 +13,7 @@ import {
 
 const ResetPasswordForm = () => {
   const [email, setEmail] = useState<string>("");
+  const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
   const auth = getAuth();
@@ -32,13 +33,15 @@ const ResetPasswordForm = () => {
         })
         .catch((error) => {
           setLoading(false);
-          alert(error.message);
+          setError(error.message);
           console.error(error);
         });
     } else if (!email) {
-      alert("Please input field");
+      setError("Please input field");
     }
   };
+
+  const inputOnFocus = () => setError("");
 
   return (
     <div
@@ -64,9 +67,11 @@ const ResetPasswordForm = () => {
             title="email"
             name="email"
             value={email}
+            onFocus={inputOnFocus}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
+        <p className="text-red-600">{error}</p>
         <input
           className={loading ? disableButtonElementStyles : buttonElementStyles}
           type="submit"
