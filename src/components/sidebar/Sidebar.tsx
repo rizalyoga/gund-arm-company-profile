@@ -51,7 +51,7 @@ const Sidebar = (props: {
             to={router.link}
             key={router.menu}
             onClick={setShowSidebar}
-            className="font-audiowide py-4 text-3xl font-semibold text-gray-700 hover:underline border-y-2 w-screen hover:bg-red-300 my-1 ease-out duration-100"
+            className="font-audiowide py-4 text-3xl font-semibold text-gray-700 hover:underline border-y-2 w-full hover:bg-red-300 my-1 ease-out duration-100"
             hidden={hiddenNavbarMenu(router.menu)}
           >
             {router.menu}
