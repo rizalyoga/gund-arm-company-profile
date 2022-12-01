@@ -22,10 +22,10 @@ const Footer = () => {
           </h1>
         </div>
         <div className="right-conten">
-          <ul className="flex gap-3 justify-evenly mb-2 font-semibold text-slate-700 duration-200 ease-in">
+          <ul className="flex gap-3 justify-evenly mb-2 font-semibold text-slate-700 duration-200 ease-in max-sm:pt-2 max-sm:-mb-0">
             {DataRouter.map((dataRouter) => (
               <li key={dataRouter.link}>
-                <Link to={dataRouter.link} className="hover:text-slate-500">
+                <Link to={dataRouter.link} className="hover:text-slate-500 ">
                   {dataRouter.menu}
                 </Link>
               </li>

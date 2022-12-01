@@ -11,14 +11,12 @@ export const loginRegisterOnSubmit = ({
   setAuthing,
 }: LoginAndRegisterDataType): void => {
   if (email && password.length > 5 && pathname !== "/register") {
-    // alert(`LOGIN \nEMAIL : ${email} \nPASSWORD : ${password} `);
     manualLoginUser({ email, password, setAuthing, setEmail, setPassword });
   } else if (email && password.length > 5 && pathname === "/register") {
-    // alert(`REGISTER \nEMAIL : ${email} \nPASSWORD : ${password} `);
     manualRegisterUser({ email, password, setAuthing, setEmail, setPassword });
   } else if (email && password.length <= 5) {
     alert("Password length minimum 6 character !");
   } else {
-    alert("Please input field !");
+    alert("Please fill in the email and password fields !");
   }
 };
