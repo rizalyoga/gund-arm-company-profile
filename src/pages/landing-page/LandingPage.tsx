@@ -3,7 +3,6 @@ import { Link, Outlet } from "react-router-dom";
 
 // Style
 import { linkTabHoverStyle } from "./StylesTab";
-import "./LandingPage.scss";
 
 // Component
 import CardAssociation from "../../components/common/cards/card-association/CardAssociation";

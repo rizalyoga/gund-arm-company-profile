@@ -27,7 +27,7 @@ const News = () => {
           Gund.Arm News
         </h1>
         <h3 className="-mt-5 text-xl font-poppins text-violet-300 italic font-semibold">
-          •This content from SpaceX API graphQL•
+          •This content from SpaceX graphQL•
         </h3>
         <section className="card-wraper gap-4 grid lg:grid-cols-3 md:grid-cols-2 max-sm:grid-cols-1 mb-8 mt-12 ">
           {data?.launchesPast &&
