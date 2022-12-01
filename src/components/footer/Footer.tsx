@@ -6,13 +6,9 @@ import DataRouter from "../../data/router-data/rotuerData.json";
 
 const Footer = () => {
   const { pathname } = useLocation();
+  const exceptionPage: string[] = ["/login", "/register", "/reset-password"];
 
-  if (
-    pathname === "/login" ||
-    pathname === "/register" ||
-    pathname === "/reset-password" ||
-    pathname.includes("/member")
-  ) {
+  if (exceptionPage.includes(pathname) || pathname.includes("/member")) {
     return <></>;
   }
 

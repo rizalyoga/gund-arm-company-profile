@@ -17,12 +17,14 @@ const AboutPage = lazy(() => import("./pages/about-page/AboutPage"));
 const AuthenticationPage = lazy(
   () => import("./pages/authentication-page/AuthenticationPage")
 );
-const DashboardPage = lazy(() => import("./pages/dashboard-page/Dashboard"));
+const DashboardPage = lazy(
+  () => import("./pages/dashboard-page/DashboardPage")
+);
 const DetailMemberPage = lazy(
   () => import("./pages/detail-member-page/DetailMember")
 );
 
-const News = lazy(() => import("./pages/news-page/News"));
+const NewsPage = lazy(() => import("./pages/news-page/NewsPage"));
 
 initializeApp(firebaseConfig.config);
 
@@ -40,7 +42,7 @@ function App() {
               <Route path="content3" element={<Content3 />} />
             </Route>
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/news" element={<News />} />
+            <Route path="/news" element={<NewsPage />} />
             <Route path="/login" element={<AuthenticationPage />} />
             <Route path="/reset-password" element={<AuthenticationPage />} />
             <Route path="/register" element={<AuthenticationPage />} />
