@@ -38,6 +38,7 @@ const Navbar: FC = () => {
     if (doLogOut) {
       signOut(auth);
       sessionStorage.clear();
+      navigate("/login");
     }
   };
 

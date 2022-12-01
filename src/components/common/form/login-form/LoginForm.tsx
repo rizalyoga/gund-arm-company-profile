@@ -81,8 +81,8 @@ const LoginForm = () => {
         width={100}
         height={100}
       />
-      <h4 className="text-gray-800 font-bold font-poppins text-[1.5rem] mt-[-25px] tracking-tighter">
-        COMPANYS
+      <h4 className="text-gray-800 font-bold font-audiowide text-[1.5rem] mt-[-25px] tracking-tighter">
+        GUND.ARM
       </h4>
       <form className="px-4" onSubmit={onSubmit}>
         <div className={divChildrenOfFormElementStyles}>

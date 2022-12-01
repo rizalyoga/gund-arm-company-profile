@@ -8,6 +8,10 @@
     "link": "/about"
   },
   {
+    "menu": "News",
+    "link": "/news"
+  },
+  {
     "menu": "Login",
     "link": "/login"
   },

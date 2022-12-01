@@ -1,4 +1,4 @@
-export const labelElementStyles: string = "text-gray-700 text-left";
+export const labelElementStyles: string = "text-left";
 
 export const inputElementStyles: string =
   "p-2 rounded-md border-2 border-gray-300 focus:outline-none focus:border-sky-200 focus:ring-1 focus:ring-sky-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500";

@@ -26,10 +26,10 @@ const PageTwo = () => {
         <h1 className="font-lobster font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-400 to-red-300 ">
           About us
         </h1>
-        <h3 className="py-4 text-white font-poppins text-2xl">
-          This is About Page
+        <h3 className="py-4 text-white font-audiowide text-3xl font-bold">
+          GUND.ARM
         </h3>
-        <p className=" text-white text-lef p-4 ">
+        <p className=" text-white text-lef p-4 -mt-4 ">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
           numquam ducimus ea quibusdam nostrum in delectus voluptatibus
           aspernatur fuga amet at cumque veniam quos dicta eum consectetur
