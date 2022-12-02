@@ -62,7 +62,7 @@ const Sidebar = (props: {
           onClick={() => {
             logOutHandler(), setShowSidebar();
           }}
-          className="font-audiowide py-4 text-3xl font-semibold text-gray-700 hover:underline border-y-2 w-screen hover:bg-red-300 cursor-pointer my-1 ease-out duration-100"
+          className="font-audiowide py-4 text-3xl font-semibold text-gray-700 hover:underline border-y-2 w-full hover:bg-red-300 cursor-pointer my-1 ease-out duration-100"
         >
           Log out
         </h3>

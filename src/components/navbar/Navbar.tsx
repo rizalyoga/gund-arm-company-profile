@@ -65,10 +65,10 @@ const Navbar: FC = () => {
             <img
               src={IconImage}
               alt="icon image"
-              className="w-[60px]  ml-[-10px] max-sm:w-[70px] max-sm:ml-[-20px] "
+              className="w-[60px]  ml-[-10px] max-sm:w-[70px]  "
             />
-            <h4 className="max-sm:hidden font-bold text-slate-800 text-2xl font-audiowide -ml-3 mt-3 tracking-tighter">
-              GUND.ARM
+            <h4 className="font-bold text-slate-800 text-2xl font-audiowide -ml-3 mt-3 tracking-tighter">
+              GUND•ARM
             </h4>
           </div>
           <div className="links">

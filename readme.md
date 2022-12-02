@@ -2,7 +2,7 @@
 
 <!-- PROJECT LOGO -->
 
-# GUND.ARM.Inc
+# GUND•ARM.Inc
 
 <img src="src/assets/icons/loader-image.webp" width=300 height=300 alt="Logo" width="250" height="auto" />
 </div>
@@ -52,7 +52,8 @@ $ yarn dev
 - [Firebase](https://firebase.google.com/)
 - [SpaceX API](https://api.spacex.land/graphql/)
 - [Jsonplaceholder API](https://jsonplaceholder.typicode.com/)
-- [react-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component)
+- [React-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component)
+- [React-icons](https://react-icons.github.io/react-icons/)
 
 ## 👤 Authors
 
