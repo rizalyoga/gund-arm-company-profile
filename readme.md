@@ -2,7 +2,7 @@
 
 <!-- PROJECT LOGO -->
 
-# Movie List App
+# GUND.ARM.Inc
 
 <img src="src/assets/icons/loader-image.webp" width=300 height=300 alt="Logo" width="250" height="auto" />
 </div>
