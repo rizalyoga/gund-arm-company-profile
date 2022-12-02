@@ -7,10 +7,17 @@ import DataRouter from "../../data/router-data/rotuerData.json";
 const Footer = () => {
   const { pathname } = useLocation();
   const exceptionPage: string[] = ["/login", "/register", "/reset-password"];
+  const auth: string | null = sessionStorage.getItem("tokenUID");
 
   if (exceptionPage.includes(pathname) || pathname.includes("/member")) {
     return <></>;
   }
+
+  const exceptLink = (menu: string) => {
+    if (!auth && menu === "Dashboard") {
+      return true;
+    }
+  };
 
   return (
     <footer className="footer-container min-h-[200px] text-gray-700 w-[100%] grid place-items-center overflow-hidden ">
@@ -24,7 +31,7 @@ const Footer = () => {
         <div className="right-conten">
           <ul className="flex gap-3 justify-evenly mb-2 font-semibold text-slate-700 duration-200 ease-in max-sm:pt-2 max-sm:-mb-0">
             {DataRouter.map((dataRouter) => (
-              <li key={dataRouter.link}>
+              <li key={dataRouter.link} hidden={exceptLink(dataRouter.menu)}>
                 <Link to={dataRouter.link} className="hover:text-slate-500 ">
                   {dataRouter.menu}
                 </Link>

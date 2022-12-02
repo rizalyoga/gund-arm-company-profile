@@ -62,7 +62,7 @@ const DetailUser = () => {
   return (
     <div className="line-grid-container bg-gray-700 min-h-screen">
       <div className=" containers m-auto w-full mt-10 text-white text-left">
-        <div className="inner-wrapper line-grid-container bg-slate-400 min-h-[90vh] mt-8 p-5 font-audiowide rounded-md flex justify-between lg:flex-row  md:flex-col md:gap-4 max-sm:flex-col shadow-md shadow-slate-300 ">
+        <div className="inner-wrapper line-grid-container bg-slate-400 min-h-[90vh] my-8 p-5 font-audiowide rounded-md flex justify-between lg:flex-row  md:flex-col md:gap-4 max-sm:flex-col shadow-md shadow-slate-300 ">
           <div className="left-content flex flex-col flex-wrap basis-1/2 z-10 md:basis-2/5">
             <p className={headingStyle}>ID MEMBER : </p>
             <p className={paragraphStyle}>{addZeroToID(Number(id))}</p>
