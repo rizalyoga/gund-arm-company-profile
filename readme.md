@@ -58,14 +58,18 @@ $ yarn dev
 
 - [Rizalyoga](https://github.com/rizalyoga/)
 
+## 📝 Notes
+
+> All gunpla pictures taken from projectgunpla.com by Dwinawan
+
 ## 🖼️ UI Preview
 
 |            Landing Page             |               News Page               |
 | :---------------------------------: | :-----------------------------------: |
 | ![](src/assets/SS-UI/home-UI.webp)  |  ![](src/assets/SS-UI/news-UI.webp)   |
-|             Login Page              |          Reset Password Page          |
+|         <b> Login Page</b>          |      <b>Reset Password Page</b>       |
 | ![](src/assets/SS-UI/login-UI.webp) |   ![](src/assets/SS-UI/reset.webp)    |
-|            About Us Page            |          Details Member Page          |
+|       <b> About Us Page </b>        |     <b> Details Member Page </b>      |
 | ![](src/assets/SS-UI/about-UI.webp) | ![](src/assets/SS-UI/details-UI.webp) |
 
 <!-- ## 🙊 Environment Variables
