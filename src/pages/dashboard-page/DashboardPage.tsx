@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import { buttonElementStyles } from "../../components/common/form/login-form/LoginFormStyles";
 import Loading from "../../components/common/loading/Loading";
@@ -6,12 +7,17 @@ import LogoCompany from "../../assets/icons/loader-image.webp";
 
 const DashboardPage: FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
+  const navigate = useNavigate();
   const auth = getAuth();
 
   const signOutEvent = () => {
-    setLoading(true);
-    signOut(auth);
-    sessionStorage.clear();
+    const doLogOut = window.confirm("Are you sure to log out ?");
+    if (doLogOut) {
+      setLoading(true);
+      signOut(auth);
+      sessionStorage.clear();
+      navigate("/login");
+    }
   };
 
   if (loading) {
@@ -26,8 +32,8 @@ const DashboardPage: FC = () => {
           style={{ backdropFilter: "blur(4px)" }}
         >
           <img src={LogoCompany} alt="GUND.ARM LOGO" className="w-[250px] " />
-          <h2 className="pt-4 text-slate-800 text-4xl font-audiowide -mt-6">
-            GUND•ARM
+          <h2 className="pt-4 text-slate-800 text-4xl font-bold font-audiowide -mt-6 tracking-tighter">
+            GUND•ARM.Inc
           </h2>
           <div>
             <button
