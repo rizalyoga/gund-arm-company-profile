@@ -82,7 +82,7 @@ const LoginForm = () => {
         height={100}
       />
       <h4 className="text-gray-800 font-bold font-audiowide text-[1.5rem] mt-[-25px] tracking-tighter">
-        GUND.ARM
+        GUND•ARM.Inc
       </h4>
       <form className="px-4" onSubmit={onSubmit}>
         <div className={divChildrenOfFormElementStyles}>
@@ -111,6 +111,7 @@ const LoginForm = () => {
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            autoComplete="off"
           />
         </div>
         <span

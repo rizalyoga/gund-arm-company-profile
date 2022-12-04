@@ -27,24 +27,42 @@ const PageTwo = () => {
           About us
         </h1>
         <h3 className="py-4 text-white font-audiowide text-3xl font-bold">
-          GUND.ARM
+          GUND•ARM.Inc
         </h3>
         <p className=" text-white text-lef p-4 -mt-4 ">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-          numquam ducimus ea quibusdam nostrum in delectus voluptatibus
-          aspernatur fuga amet at cumque veniam quos dicta eum consectetur
-          ipsam, commodi sapiente? Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Voluptatum accusamus eum quidem aperiam delectus,
-          dolor tenetur provident exercitationem voluptas ullam necessitatibus!
-          At sunt vel ab quo ipsam repudiandae exercitationem! Tempora. Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, voluptates.
-          Deleniti officiis optio quis ipsum minus incidunt ratione perferendis,
-          soluta atque suscipit omnis adipisci et ipsa in laboriosam sint vel!
+          GUND•ARM.Inc (株式会社ガンダム Kabushiki Gaisha Gandamu) is a research
+          and development company from the Ad Stella in Mobile Suit Gundam the
+          Witch from Mercury. GUND•ARM.Inc created from the merger of{" "}
+          <a
+            className="text-sky-300"
+            href="https://gundam.fandom.com/wiki/Shin_Sei_Development_Corporation"
+            target="blank"
+          >
+            Shin Sei Development Corporation
+          </a>{" "}
+          and{" "}
+          <a
+            className="text-sky-300"
+            href="https://gundam.fandom.com/wiki/Peil_Technologies"
+            target="blank"
+          >
+            Peil Technologies's{" "}
+          </a>
+          development teams. Our main focus is to research and develop the
+          various medical applications of the{" "}
+          <a
+            className="text-sky-300"
+            href="https://gundam.fandom.com/wiki/GUND_Format"
+            target="blank"
+          >
+            GUND Format
+          </a>{" "}
+          technology.
         </p>
         <div className="h-2 w-[98%] rounded-full bg-gradient-to-r from-red-300 via-purple-400 to-blue-300" />
         <div className="data-container w-[97%] my-10 ">
           <h1 className="text-white font-poppins font-bold text-[2rem] pb-8">
-            Company Member
+            Develompment Teams
           </h1>
           {dataUsers &&
             dataUsers.map((data) => (

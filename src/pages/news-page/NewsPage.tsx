@@ -24,7 +24,7 @@ const News = () => {
     <div className="line-grid-container ">
       <div className="containers mt-12 min-h-screen ">
         <h1 className="font-lobster text-7xl font-extrabold py-4 text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-purple-400 to-blue-300">
-          Gund.Arm News
+          Gund•Arm News
         </h1>
         <h3 className="-mt-5 text-xl font-poppins text-violet-300 italic font-semibold">
           •This content from SpaceX graphQL•
