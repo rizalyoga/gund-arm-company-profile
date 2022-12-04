@@ -9,7 +9,7 @@ const News = () => {
   const [getNewsLaunchesPast, { loading, error, data }] = useLazyQuery(
     GET_LAUNCHES_PAST,
     {
-      variables: { limit: 15 },
+      variables: { limit: 13 },
     }
   );
 
