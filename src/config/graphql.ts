@@ -5,6 +5,6 @@ const httpLink = new HttpLink({
 });
 
 export const client = new ApolloClient({
-  uri: "https://api.spacex.land/graphql",
+  uri: "https://spacex-production.up.railway.app/",
   cache: new InMemoryCache(),
 });

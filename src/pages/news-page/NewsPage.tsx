@@ -55,7 +55,7 @@ const News = () => {
                 key={dataLaunchPast.mission_name}
                 missionName={dataLaunchPast.mission_name}
                 details={dataLaunchPast.details}
-                thumbnail={dataLaunchPast.ships[0]?.image}
+                // thumbnail={dataLaunchPast.ships[0]?.image}
                 type={dataLaunchPast.__typename}
               />
             ))}

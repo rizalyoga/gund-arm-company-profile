@@ -78,13 +78,13 @@ const ResetPasswordForm = () => {
           value={loading ? "Loading..." : "Reset Password"}
           disabled={loading}
         />
-        <span className="absolute mt-[-20px] pb-4 m-auto left-0 right-0">
-          Already have an account ?{" "}
-          <Link to="/login" className="text-blue-600 hover:underline">
-            Login
-          </Link>
-        </span>
       </form>
+      <span className="absolute mt-[-20px] pb-4 m-auto left-0 right-0 ">
+        Already have an account ?{" "}
+        <Link to="/login" className="text-blue-600 hover:underline">
+          Login
+        </Link>
+      </span>
     </div>
   );
 };
