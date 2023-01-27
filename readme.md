@@ -22,6 +22,13 @@ Here is a working live demo : [Demo](https://gund-arm.web.app/)
 - Fetch data from SpaceX GraphQL API with apollo clinet.
 - Responsive Website.
 
+## 📝 Notes
+
+> All gunpla pictures taken from projectgunpla.com by Dwinawan </br>
+> If you want to login, you can use this account : </br>
+> Email : admin@gmail.com </br>
+> Password : @123456asd </br>
+
 ## 🧰 Run in locale
 
 To clone and run this website, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [yarn](https://yarnpkg.com/) installed on your computer. From your command line:
@@ -58,10 +65,6 @@ $ yarn dev
 ## 👤 Authors
 
 - [Rizalyoga](https://github.com/rizalyoga/)
-
-## 📝 Notes
-
-> All gunpla pictures taken from projectgunpla.com by Dwinawan
 
 ## 🖼️ UI Preview
 
